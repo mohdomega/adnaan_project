@@ -1,0 +1,618 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    padding: 0;
+    min-height: 100vh;
+    text-align: center; 
+}
+
+/* Diagonal gradient background covering half the screen */
+body:before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        135deg, 
+        #EDEEF0 0%, 
+        #EDEEF0 30%, 
+        #616266 80%, 
+        #616266 100%
+    );
+    z-index: -1;
+}
+
+.main_container{
+    max-width: 1440px;
+    width: 100%;
+    display: inline-block; /* Allows centering via text-align */
+    text-align: left; /* Resets alignment for child elements */
+    position: relative;
+}
+
+/* Header container styling */
+#header_container {
+    width: 100%;
+    height: 80px;
+    overflow: hidden;
+    padding: 10px 20px;
+    display: inline-block;
+  }
+  
+  #logo_container {
+    float: left;
+    display: inline-block;
+  }
+  
+  #logo_container img {
+    height: 50px;
+    vertical-align: middle;
+    border-radius: 100%;
+  }
+  
+  #logo_container h4 {
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 10px;
+    font-size: 14px;
+    color: gray;
+    font-weight: 500;
+  }
+  
+  /* Profile container to the right */
+  #profile_container {
+    float: right;
+    text-align: right;
+  }
+  
+  #profile_container div {
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 10px;
+  }
+  
+  #profile_container h3 {
+    font-size: 10px;
+    color: #FFFFFF;
+    line-height: 1.2;
+  }
+  
+  #profile_container img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    vertical-align: middle;
+  }
+
+
+  /* navbar   */
+
+  .navbar_container {
+    padding: 0px 20px;
+    overflow: hidden;
+    width: 100%;
+    vertical-align: middle;
+}
+
+
+.navbar_container span {
+    float: left;
+    position: relative;
+    padding-left: 20px; 
+    vertical-align: middle;
+    padding-top: 10px;
+}
+.navbar > span {
+    position: relative;
+    cursor: pointer;
+}
+
+.navbar > span >span{
+    position: absolute;
+    top: 0px;
+    left: 195px;
+    padding-left: 10px;
+}
+
+.notification_icon{
+  float: right;
+}
+
+.arrow-icon {
+    /* display: inline-block; */
+    transform: rotate(90deg);
+    /* margin-left: 5px; */
+}
+
+.notification_icon > img{
+    border-radius: 100%;
+}
+
+
+/* Main  */
+
+.banner {
+    padding: 0px 20px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.banner >img{
+    padding-top: 20px;
+    width: 100%;
+}
+
+.main_section_container {
+    padding: 0px 20px;
+    overflow: hidden;
+    width: 100%;
+}
+
+/* first row   */
+.first_row {
+    width: 100%;
+    overflow: hidden; /* To contain floats */
+    padding-top: 10px;
+    /* border: 1px solid red; */
+}
+.left{
+    /* border: 1px solid red; */
+    /* width: 380px; */
+    width: 27%;
+    position: relative;
+    float: left;
+}
+.right{
+    /* border: 1px solid red; */
+    width:71%;
+    position: relative;
+    float: right;
+    height: 100%;
+}
+
+.left>h3{
+    text-align: center;
+    background: #FFF;
+    font-weight: 500;
+    padding: 10px;
+}
+.left>.btn{
+    padding: 12px;
+    /* background-color: red; */
+    width: 190px;
+    border-radius: 5px;
+    background: linear-gradient(to bottom, #FDBB37, #F6801D);
+    position: absolute;
+    bottom: 20px;
+    left: 90px;
+    cursor: pointer;
+}
+.btn>label{
+    font-size: 14px;
+    color: #EDEEF0;
+    cursor: pointer;
+}
+
+.form{
+    background-color: lightgray;
+    width: 100%;
+    overflow: hidden;
+    min-height: 274px;
+    height: 100%;
+}
+.core_value{
+    float: left;
+}
+.form_textArea{
+    float: right;
+}
+.right .btn{
+    padding: 12px;
+    /* background-color: red; */
+    width: 190px;
+    border-radius: 5px;
+    background: linear-gradient(to bottom, #FDBB37, #F6801D);
+    /* position: absolute;
+    bottom: 20px;
+    left: 90px; */
+    cursor: pointer;
+}
+.right >h3{
+    text-align: center;
+    background-color: #EDEEF0;
+    font-weight: 500;
+    padding: 10px;
+}
+.core_value{
+   /* background-color:red; */
+   width: 24%;
+   text-align: center;
+}
+.core_value>img{
+    border-radius: 100%;
+    padding: 10px 0px;
+}
+.core_value>.btn{
+    position: absolute;
+    left: 20px;
+    cursor: pointer;
+}
+
+.form_textArea{
+    width: 75%;
+}
+.form_textArea >h5{
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+select{
+    width: 95%;
+    height: 30px;
+}
+.form_textArea > textarea{
+    width: 95%;
+    height:114px ;
+    padding: 10px;
+}
+p{
+    color: #616266;
+    text-decoration: underline;
+    position: absolute;
+    right: 35px;
+    bottom: 20px;
+}
+
+.third_row{
+    padding-top: 10px;
+}
+.third_row>.left >.btn{
+    padding: 12px;
+    /* background-color: red; */
+    width: 190px;
+    border-radius: 5px;
+    background: linear-gradient(to bottom, #FDBB37, #F6801D);
+    position: absolute;
+    bottom: 10px;
+    left: 90px;
+    cursor: pointer;
+}
+
+.team{
+    background-color: lightgray;
+    width: 100%;
+    overflow: hidden;
+    height: 270px;
+}
+.team>.first{
+    float: left;
+    text-align: center;
+    width: 50%;
+    padding-top: 10px;
+}
+.team>.second{
+    float: right;
+    text-align: center;
+    width: 50%;
+    text-align: left;
+}
+.team>.second{
+    color: rgb(207, 15, 9);
+}
+.team>.second > h2{
+    padding-top: 15px;
+    font-weight: 500;
+    text-decoration: underline;
+}
+.team span{
+    color: rgb(48, 46, 46);
+    text-decoration: underline;
+    font-weight: 600;
+    padding-top: 25px;
+}
+
+.left2{
+    float:left;
+    padding-left: 30px;
+    width: 36.5%;
+    position: relative;
+}
+.left2_btn{
+    padding: 12px;
+    width: 190px;
+    border-radius: 5px;
+    background: linear-gradient(to bottom, #FDBB37, #F6801D);
+    position: absolute;
+    bottom: 10px;
+    left: 180px;
+}
+
+.left2_btn>label{
+    font-size: 14px;
+    color: #EDEEF0;
+}
+
+
+
+.youtube{
+    text-align: center;
+}
+.youtube >img{
+    padding: 15px 30px;
+    width: 100%;
+    height: 180px;
+
+}
+
+.left3{
+    width: 34%;
+    /* border:1px solid red; */
+    float: right;
+    position: relative;
+}
+.left3>h3{
+    text-align: center;
+    background: #FFF;
+    font-weight: 500;
+    padding: 10px;
+    width: 100%;
+}
+
+.water{
+    width: 100%;
+    height: 220px;
+    /* border:1px solid red; */
+    overflow: hidden;
+}
+.water>img{
+    position: relative;
+    top: -170px;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.left3>textarea{
+   position: absolute;
+   top: 110px;
+   left: 15px;
+   width: 95%;
+   height:70px ;
+   padding: 10px;
+}
+
+.left3 > h4{
+    padding: 15px;
+    background-color: lightgray;
+}
+.left3 > img{
+    position: absolute;
+    bottom: 80px;
+    right: 35px;
+}
+
+.left3_btn{
+    padding: 12px;
+    width: 190px;
+    border-radius: 5px;
+    background: linear-gradient(to bottom, #FDBB37, #F6801D);
+    position: absolute;
+    bottom: 10px;
+    left: 150px;
+    z-index: 1;
+}
+
+.left3_btn>label{
+    font-size: 14px;
+    color: #EDEEF0;
+}
+
+.footer{
+    text-align: center;
+    width: 100%;
+    background-color: #EDEEF0;
+    margin-top:30px;
+}
+.footer>h4{
+    padding: 20px;
+}
+
+.mid_row{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.first_row > .left > div{
+padding: 10px 20px;
+}
+.first_row > .left > div>img{
+padding-right:39px;
+}
+
+.table{
+    background-color: #F6801D;
+    color: #EDEEF0;
+}
+
+.table>span{
+    padding-right: 18px;
+}
+
+.table_value{
+    background-color: #b4b6bb;
+}
+.table_value>img{
+    border-radius: 100%;
+}
+.table_value>span{
+    /* padding: ; */
+    padding-right: 35px;
+}
+.white{
+    background-color: #EDEEF0;
+}
+
+.strong_div{
+    background-color: #b4b6bb;
+    width: 100%;
+}
+.strong_div>strong{
+    float: right;
+    padding-right: 30px;
+    padding-top: 10px;
+    background-color: #b4b6bb;
+}
+
+.Point_bottom{
+    padding: 0;
+    position: relative;
+}
+.Point_bottom>img{
+    width: 412px;
+    padding: 0;
+    position: relative;
+    left: -18px;
+    top: 18px;
+}
+
+.Point_bottom>div{
+    position: absolute;
+    top:50px;
+}
+.Point_bottom>div>h3:nth-child(1){
+    color: #FDBB37;
+}
+
+.appriciation_div{
+    background-color: #EDEEF0;
+    position: relative;
+    top: 20px;
+    left: 20px;
+    height: 50px;
+    width: 95%;
+}
+
+.appriciation_div>img{
+    border-radius: 100%;
+    position: relative;
+    top: 5px; 
+    left: 10px; 
+}
+
+.appriciation_div>span{
+    position: relative;
+    top: -12px; 
+    left: 20px;
+}
+.form>span{
+    position: relative;
+    top: 30px;
+    left: 20px;
+    text-decoration: underline;
+}
+
+.tabs{
+    padding-top: 50px;
+    
+}
+.tabs>button{
+    padding: 12px;
+    width: 190px;
+    border-radius: 5px;
+    background: linear-gradient(to bottom, #FDBB37, #F6801D);
+    z-index: 1;
+    color:#FFFFFF;
+    border: 1px solid #F6801D;
+    float: right;
+    position: relative;
+    top: -50px;
+}
+.tab_btn1{
+    padding: 12px;
+    width: 190px;
+    border-radius: 5px;
+    background: #FFFFFF;
+    z-index: 1;
+    border: 1px solid #F6801D;
+    color: #F6801D;
+}
+.tab_btn2{
+    padding: 12px;
+    width: 190px;
+    border-radius: 5px;
+    background: linear-gradient(to bottom, #FDBB37, #F6801D);
+    z-index: 1;
+    color:#FFFFFF;
+    border: 1px solid #F6801D;
+}
+
+.second_table{
+    padding-top: 30px;
+    height: auto;
+}
+.row1{
+    background-color: #FFFFFF;
+    overflow: hidden;
+    width: 100%;
+    padding:15px;
+}
+.row1 > .fir{
+    float: left;
+}
+.row1 > .sec{
+    float: right;
+}
+.row1>div{
+    overflow: hidden;
+}
+
+.row1>div> span> img{
+    border-radius: 100%;
+    float: left;
+    padding-right: 20px;
+}
+.row1>div> div{
+    float: left;
+}
+.sec>button:nth-child(1){
+    padding: 10px;
+    /* height: 30px; */
+    background-color: #F6801D;
+    color: #FFFFFF;
+}
+
+.sec{
+    position: relative;
+    top: 10px;
+}
+
+.points_div{
+    overflow: hidden;
+    height: 30px;
+    width: 100px;
+    position: relative;
+    top: 8px;
+    right: 4px;
+}
+.points_div>img{
+    float: left;
+    padding-left: 10px;
+    padding-bottom: 2px;
+}
+.points_div>strong{
+    float: right;
+    padding-right: 10px;
+    font-size: 18px;
+}
+
+.dark_color{
+    background-color: #b4b6bb;
+}
