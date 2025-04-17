@@ -566,6 +566,7 @@ padding-right:39px;
 }
 .row1 > .fir{
     float: left;
+    width: 500px;
 }
 .row1 > .sec{
     float: right;
