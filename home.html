@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .main{
+            width: 100vw;
+            height: 100vh;
+            
+        }
+        .containt_container{
+            /* border: 1px solid red; */
+            max-width: 1200px;
+            width: 100%;
+            height: 100%;
+            margin: auto;
+            background: linear-gradient(
+                    135deg, 
+                    #EDEEF0 0%, 
+                    #EDEEF0 30%, 
+                    #616266 80%, 
+                    #616266 100%
+            );
+            z-index: -1;
+            padding: 20px 50px;
+        }
+        #header_container {
+            width: 100%;
+            height: 80px;
+            overflow: hidden;
+            display: inline-block;
+        }
+        #logo_container {
+            float: left;
+            display: inline-block;
+        }
+        
+        #logo_container img {
+            height: 50px;
+            vertical-align: middle;
+            border-radius: 100%;
+        }
+        
+        #logo_container h4 {
+            display: inline-block;
+            vertical-align: middle;
+            padding-left: 10px;
+            font-size: 14px;
+            color: gray;
+            font-weight: 500;
+        }
+        /* Profile container to the right */
+        #profile_container {
+            float: right;
+            text-align: right;
+        }
+        
+        #profile_container div {
+            display: inline-block;
+            vertical-align: middle;
+            padding-right: 10px;
+        }
+        
+        #profile_container h3 {
+            font-size: 10px;
+            color: #FFFFFF;
+            line-height: 1.2;
+        }
+        
+        #profile_container img {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            vertical-align: middle;
+        }
+        /* navbar   */
+
+        .navbar_container {
+            overflow: hidden;
+            width: 100%;
+            vertical-align: middle;
+        }
+
+
+        .navbar_container span {
+            float: left;
+            position: relative;
+            padding-left: 20px; 
+            vertical-align: middle;
+        }
+        .navbar > span {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .navbar > span >span{
+            position: absolute;
+            top: 0px;
+            left: 195px;
+            padding-left: 10px;
+        }
+
+        .notification_icon{
+        float: right;
+        }
+
+        .banner{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        .banner >img{
+            width: 100%;
+            height: 100%;
+        }
+        .first_row{
+            overflow: hidden;
+            width: 100%;
+            /* border: 1px solid red; */
+        }
+        .left{
+            width: 30%;
+            height: 310px;
+            float: left;
+        }
+
+        .first_row > .right{
+            float: right;
+        }
+        .bgImage {
+            position: relative;
+        }
+        .bgImage >img{
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box; 
+        }
+        .bgImage>button{
+            padding: 12px;
+            max-width: 190px;
+            width: 100%;
+            border-radius: 5px;
+            background: linear-gradient(to bottom, #FDBB37, #F6801D);
+            cursor: pointer;
+            border: none;
+            position: absolute;
+            left: 50px;
+            bottom: 15px;
+        }
+        .right>h3,
+        .daily{
+            height: 50px;
+            padding-top: 15px;
+            background-color: #FFFFFF;
+            width: 100%;
+        }
+        .right>h3,
+        .daily>h3{
+            text-align: center;
+            color: #616266;
+        }
+        .right{
+            width: 68%;
+            /* border: 1px solid red; */
+            height: 310px;
+            min-height: 150px;
+        }
+        
+        .form{
+            background-color: lightgray;
+            /* width: 100%; */
+            overflow: hidden;
+            min-height: 274px;
+            /* height: 100%; */
+        }
+        .core_value{
+            width: 24%;
+            text-align: center;
+            float: left;
+            position: relative;
+        }
+        .core_value>img{
+            border-radius: 100%;
+            padding: 10px 0px;
+        }
+        .core_value>.btn{
+            padding: 10px 5px;
+            max-width: 250px;
+            width: 100%;
+            border-radius: 5px;
+            background: linear-gradient(to bottom, #FDBB37, #F6801D);
+            cursor: pointer;
+            border: none;
+            /* position: absolute;
+            left: 20px;
+            bottom: 0px; */
+        }
+        .form_textArea{
+            float: right;
+            width: 65%;
+        }
+        .form_textArea>.btn{
+            padding: 10px 20px;
+            max-width: 250px;
+            width: 100%;
+            border-radius: 5px;
+            background: linear-gradient(to bottom, #FDBB37, #F6801D);
+            cursor: pointer;
+            border: none;
+        }
+        .form_textArea >h5{
+            padding-top: 20px;
+            padding-bottom: 10px;
+        }
+        .form_textArea >p{
+            float: right;
+        }
+        select{
+            width: 95%;
+            height: 30px;
+        }
+        .form_textArea > textarea{
+            width: 95%;
+            height:114px ;
+            padding: 10px;
+        }
+        .form>span{
+            position: relative;
+            top: 30px;
+            left: 20px;
+            text-decoration: underline;
+        }
+
+        .third_row{
+            width: 100%;
+            border: 1px solid red;
+            height: 300px;        
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="containt_container">
+            <header>
+                <!-- Header  -->
+                <div id="header_container">
+                    <div id="logo_container">
+                        <img src="./assets/logo.jpeg" alt="logo">
+                        <h4>AT OUR CORE</h4>
+                    </div>
+                    <div id="profile_container">
+                        <div>
+                            <h3>Michael Boorer</h3>
+                            <h3>My Account</h3>
+                            <h3>Logout</h3>
+                        </div>
+                        <img src="./assets/profileImg.jpeg" alt="profile">
+                    </div>
+                </div>
+
+                <!-- Navbar  -->
+                <div class="navbar_container">
+                    <div class="navbar">
+                        <span>CHALLENGE DETAILS <span class="arrow-icon">›</span> </span>
+                        <span>|</span>
+                        <span>MANAGER'S RECOGNITION</span>
+                        <span>|</span>
+                        <span>TECH SUPPORT</span>
+                        <span>|</span>
+                        <span>SMARTPHONE</span>
+                        <span>|</span>
+                        <span>LEADERBOARD</span>
+                    </div>
+                    <div class="notification_icon">
+                        <img src="./assets/bell.jpeg" alt="">
+                    </div>
+                </div>
+            </header>
+            
+            <main>
+                <!-- Banner  -->
+                <div class="banner">
+                    <img src="./assets/banner.jpeg" alt="banner">
+                </div>
+
+                <!-- First Row  -->
+                <div class="first_row">
+                    <!-- left  -->
+                     <div class="left">
+                        <div class="daily">
+                            <h3>DAILY INSPIRATION</h3>
+                        </div>
+                        <div class="bgImage">
+                            <img src="./assets/dilyInspiration.jpeg" alt="">
+                           <button>
+                                <input type="checkbox">
+                                <label >Click HERE 10 PTS</label>
+                           </button>
+                        </div>
+                     </div>
+
+                     <!-- right  -->
+                     <div class="right">
+                        <h3>CHECK IN WITH YOURSELF</h3>
+                        <div class="form">
+                            <div class="core_value">
+                                <h4>Core Values</h4>
+                                <img src="./assets//apple.jpeg" alt="apple">
+                                <div class="btn">
+                                    <input type="checkbox">
+                                    <label >CLICK TO SEE 5 PTS</label>
+                                </div>
+                            </div>
+                            <div class="form_textArea">
+                                <h5>How did you use one of the Core Values today?</h5>
+                                <select name="" id="">
+                                    <option value="select">Which Value</option>
+                                    <option value="test1">Test 1</option>
+                                    <option value="test2">Test 2</option>
+                                    <option value="test3">Test 3</option>
+                                </select>
+                                <br>
+                                <br>
+                                <textarea name="" id=""></textarea>
+                                <div class="btn">
+                                    <input type="checkbox">
+                                    <input type="checkbox">
+                                    <label >SUBMIT 20 POINTS</label>
+                                </div>
+                                <p>See all ></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Second row  -->
+                <div class="first_row">
+                    <!-- left  -->
+                     <div class="left">
+                        <div class="daily">
+                            <h3>DAILY INSPIRATION</h3>
+                        </div>
+                        <div class="bgImage">
+                            <img src="./assets/dilyInspiration.jpeg" alt="">
+                           <button>
+                                <input type="checkbox">
+                                <label >Click HERE 10 PTS</label>
+                           </button>
+                        </div>
+                     </div>
+
+                     <!-- right  -->
+                     <div class="right">
+                        <h3>CHECK IN WITH YOURSELF</h3>
+                        <div class="form">
+                            <div class="core_value">
+                                <h4>Core Values</h4>
+                                <img src="./assets//apple.jpeg" alt="apple">
+                                <div class="btn">
+                                    <input type="checkbox">
+                                    <label >CLICK TO SEE 5 PTS</label>
+                                </div>
+                            </div>
+                            <div class="form_textArea">
+                                <h5>How did you use one of the Core Values today?</h5>
+                                <select name="" id="">
+                                    <option value="select">Which Value</option>
+                                    <option value="test1">Test 1</option>
+                                    <option value="test2">Test 2</option>
+                                    <option value="test3">Test 3</option>
+                                </select>
+                                <br>
+                                <br>
+                                <textarea name="" id=""></textarea>
+                                <div class="btn">
+                                    <input type="checkbox">
+                                    <input type="checkbox">
+                                    <label >SUBMIT 20 POINTS</label>
+                                </div>
+                                <p>See all ></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Third Row  -->
+                <div class="third_row">
+                    <div class="left">
+                        <h3>MEET YOUR TEAM</h3>
+                        <div class="team">
+                            <div class="first">
+                                <img src="./assets/Jeff.jpeg" alt="jeff">
+                                <h3>Jeff Baitto</h3>
+                                <h5>Vice President,</h5>   
+                                <h5>Community Management</h5>
+                            </div>   
+            
+                            <div class="second">
+                                <h2>MONDAY</h2>
+                                <h2>WEDNESDAY</h2>
+                                <h2>FRIDAY</h2>
+                                <span>More Info ></span>
+                            </div>
+                        </div>
+                        <div class="btn">
+                            <input type="checkbox">
+                            <label >READ NOW 10 PTS</label>
+                        </div>
+                    </div>
+                    <div class="left left2">
+                        <h3>WEEKLY VIDEO</h3>
+                        <div class="team youtube">
+                           <img src="./assets/youtube.jpeg" alt="">
+                           <br>
+                           <span>Proud of Team</span>
+                        </div>
+                        <div class="left2_btn">
+                            <input type="checkbox">
+                            <label >WATCH NOW 40 PTS</label>
+                        </div>
+                    </div>
+                    <div class="left3">
+                        <h3>DE-STRESS CORNER</h3>
+                        <h4>Write one thing that you stressed about.</h4>
+                        <textarea name="" id=""></textarea>
+                        <img src="./assets/bigBird.jpeg" alt="">
+                        <div class="water">
+                           <img src="./assets/water.jpeg" alt="">
+                        </div>
+                        <div class="left3_btn">
+                            <input type="checkbox">
+                            <label >WATCH NOW 40 PTS</label>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            
+            <footer>
+
+            </footer>
+        </div> 
+    </div>
+</body>
+</html>
